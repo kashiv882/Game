@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #89C15E;
+    text-transform: uppercase;
+}
+
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard{
+    width: 50rem;
+    height: 12rem;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin-left: 30px;
+    color: #FFF;
+    font-size: 2.125rem;
+    font-weight: 600;
+    letter-spacing: 0.25rem;
+}
+
+.score{
+    width: 8.6rem;
+    height: 8rem;
+    padding:10px;
+    border-radius: 9px;
+    background: #FFF;
+    color: #656565;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.7px;
+    text-align: center;
+}
+
+#computer-score, #your-score {
+    color: #252525;
+    text-align: center;
+    font-size: 3.75rem;
+    font-weight: 700;
+}
+
+.computer-score {
+    margin-left: 16rem;
+}
+
+.your-score {
+    margin-right: 1rem;
+}
+
+
+
+.hands{
+    background-image: url("./images/triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14.5rem;
+    width: 22rem;
+    height: 24rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+
+}
+
+.hand{
+    background-color: #FFF;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    box-shadow: inset 3px 0px 18px 1px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(2px 3px 13px rgb(93, 93, 93));
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.scissors-img{
+    padding: 37px 47px;
+    height: 120px;
+}
+
+.rock-img{
+    padding: 39px 0px 0px 36px;
+    height: 80px;
+}
+
+.paper-img{
+    padding: 33px 0 0 35px;
+    height: 90px;
+}
+
+.rock{
+    margin-right: 32px;
+    border: 10px solid #0074B6;
+}
+
+.paper{
+    border: 10px solid #FFA943;
+}
+
+.scissors{
+    margin-left: 32px;
+    border: 10px solid #BD00FF;
+}
+
+.hand:hover{
+    transform: translate3d(0px, -8px, 0px);
+}
+
+
+
+.buttons{
+    position: absolute;
+    left: 79%;
+    top: 90%;
+    width: 16rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{  
+    width: 119px;
+    height:40px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    background: rgba(217, 217, 217, 0.00);
+    cursor: pointer;
+}
+
+.next-btn{
+    display: none;
+    margin-left: 0.6rem;
+
+}
+
+.buttons a{
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #FFF;
+    color: #676666;
+}
+
+
+
+.rules-board{
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 76%;
+    width: 280px;
+    height: 320px;
+    padding: 11px 33px;
+    border: 5px solid rgb(236, 188, 188);
+    border-radius: 13px;
+    background-color: #2f8c67;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+h2{
+    color: #FFF;
+    padding: 0 10px 10px 2px;
+    text-align: center;
+}
+
+li{
+    font-size: 13px;
+    list-style: square;
+}
+
+li::marker {
+    color: #FFD600;
+    font-size: 20px;
+}
+
+
+
+.cross-button{
+    position:fixed;
+    top: 32%;
+    right: 0;
+    text-align: center;
+    height: 44px;
+    width: 46px;
+    color: #FFF;
+    font-family: Dangrek;
+    font-size: 22px;
+    font-weight: 500;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.cross-button:hover{
+    transform: translate3d(0px, -8px, 0px);
+}
+
+
+.trophy {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 20px; 
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    margin-top: 50px;
+}
+
+.star img {
+    height: 250px;
+}
+
+#winWin {
+    color: #FFF;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 9.1px;
+    margin-top: 50px; 
+}
+
+#msg {
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 4.1px;
+}
+
+.play_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.play-btn {
+    width: 174px;
+    height: 44px;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    background: #FFF;
+    color: #6B6B6B;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+
+.play-btn:hover {
+    background-color: #89C15E;
+}
+
+.rule_button {
+    float: right;
+    margin-right: 20px;
+}
+
+
+
+.contest{
+    width: 56.25rem;
+    display:none;
+    margin-top: 50px;
+}
+
+.contest > div{
+    flex: 1;
+}
+
+.contest h4{
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.decision{
+    height: 320px;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.win{
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 3.9px;
+}
+
+.against-pc{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.9px;
+}
+
+.handimage{
+    display: flex;
+    justify-content: center;
+    margin-left: 75px;
+}
+
+.newGame{
+    margin-top: 25px;
+}
+
+
+
+.hand1{
+    background-color: #FFF;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    box-shadow: inset 3px 0px 18px 1px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(2px 3px 13px rgb(93, 93, 93));
+}
+
+.hand2{
+    padding-top: 36px;
+    height: 80px;
+}
+
+
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 1s infinite;
+  }
+  
